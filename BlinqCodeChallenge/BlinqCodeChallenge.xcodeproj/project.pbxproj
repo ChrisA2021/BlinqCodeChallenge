@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A052BDC2965DB9D00C5738A /* APIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A052BDB2965DB9D00C5738A /* APIRequester.swift */; };
 		2AA93FCC2962A4B600BC16AB /* BlinqCodeChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA93FCB2962A4B600BC16AB /* BlinqCodeChallengeApp.swift */; };
 		2AA93FCE2962A4B600BC16AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA93FCD2962A4B600BC16AB /* ContentView.swift */; };
 		2AA93FD02962A4B700BC16AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA93FCF2962A4B700BC16AB /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A052BDB2965DB9D00C5738A /* APIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequester.swift; sourceTree = "<group>"; };
 		2AA93FC82962A4B600BC16AB /* BlinqCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinqCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA93FCB2962A4B600BC16AB /* BlinqCodeChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinqCodeChallengeApp.swift; sourceTree = "<group>"; };
 		2AA93FCD2962A4B600BC16AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		2AA93FBF2962A4B600BC16AB = {
 			isa = PBXGroup;
 			children = (
+				2A052BDB2965DB9D00C5738A /* APIRequester.swift */,
 				2AA93FCA2962A4B600BC16AB /* BlinqCodeChallenge */,
 				2AA93FDB2962A4B700BC16AB /* BlinqCodeChallengeTests */,
 				2AA93FE52962A4B700BC16AB /* BlinqCodeChallengeUITests */,
@@ -263,6 +266,7 @@
 				2AA93FCE2962A4B600BC16AB /* ContentView.swift in Sources */,
 				2AA93FF62962A5CB00BC16AB /* PreRequestView.swift in Sources */,
 				2AA93FCC2962A4B600BC16AB /* BlinqCodeChallengeApp.swift in Sources */,
+				2A052BDC2965DB9D00C5738A /* APIRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

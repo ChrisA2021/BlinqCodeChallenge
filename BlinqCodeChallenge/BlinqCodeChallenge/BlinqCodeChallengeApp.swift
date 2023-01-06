@@ -11,7 +11,7 @@ import SwiftUI
 struct BlinqCodeChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PreRequestView()
         }
     }
 }
