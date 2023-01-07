@@ -18,50 +18,66 @@ struct RequestFormView: View {
     @State private var emailError = "Please enter your email"
     @State private var confirmEmailError = "Please confirm your email"
     @State private var requestMessage = ""
+    @State private var showCongratulationsView = false
     
     var body: some View {
-        Form {
-            Section(header: Text("User Details"), footer: Text("* denotes a required field")) {
-                TextField("Full Name *", text: $fullName)
-                Text(fullNameError).foregroundColor(Color.red)
-                TextField("Email *", text: $email)
-                Text(emailError)
+        VStack {
+            Form {
+                Section(header: Text("User Details"), footer: Text("* denotes a required field")) {
+                    TextField("Full Name *", text: $fullName)
+                    Text(fullNameError).foregroundColor(Color.red)
+                    TextField("Email *", text: $email)
+                    Text(emailError)
+                        .foregroundColor(Color.red)
+                    TextField("Confirm Email *", text: $confirmEmail)
+                    Text(confirmEmailError)
+                        .foregroundColor(Color.red)
+                    
+                }
+                Button("Send") {
+                    if (fullName.count < 3) {
+                        fullNameError = "Please enter at least 3 characters"
+                    }
+                    else if (fullName.count >= 3) {
+                        fullNameError = ""
+                    }
+                    
+                    if (email.isEmpty || !isEmailValid(emailStr: email)) {
+                        emailError = "Please enter a valid email"
+                    }
+                    else if (!email.isEmpty) {
+                        emailError = ""
+                    }
+                    
+                    if (email != confirmEmail) {
+                        confirmEmailError = "The emails do not match, please try again"
+                    }
+                    else if (email == confirmEmail) {
+                        confirmEmailError = ""
+                    }
+                    
+                    
+                    if (fullName.count >= 3 && !email.isEmpty && email == confirmEmail) {
+                        requestMessage = "Your request is being sent"
+                        requestMessage = saveToServer(userName: fullName, userEmail: email)
+                        if (requestMessage == "Registered") {
+                            showCongratulationsView = true
+                        }
+                    }
+                }
+                Text(requestMessage)
                     .foregroundColor(Color.red)
-                TextField("Confirm Email *", text: $confirmEmail)
-                Text(confirmEmailError)
-                    .foregroundColor(Color.red)
-                
             }
-            Button("Send") {
-                if (fullName.count < 3) {
-                    fullNameError = "Please enter at least 3 characters"
-                }
-                else if (fullName.count >= 3) {
-                    fullNameError = ""
-                }
-                
-                if (email.isEmpty || !isEmailValid(emailStr: email)) {
-                    emailError = "Please enter a valid email"
-                }
-                else if (!email.isEmpty) {
-                    emailError = ""
-                }
-                
-                if (email != confirmEmail) {
-                    confirmEmailError = "The emails do not match, please try again"
-                }
-                else if (email == confirmEmail) {
-                    confirmEmailError = ""
-                }
-                
-                
-                if (fullName.count >= 3 && !email.isEmpty && email == confirmEmail) {
-                    requestMessage = "Your request is being sent"
-                    requestMessage = saveToServer(userName: fullName, userEmail: email)
-                }
+        }.sheet(isPresented: $showCongratulationsView) {
+            NavigationView {
+                CongratulationsView()
+                    .toolbar{
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Dismiss") {
+                                showCongratulationsView = false
+                            }
+                        }                        }
             }
-            Text(requestMessage)
-                .foregroundColor(Color.purple)
         }
     }
     
