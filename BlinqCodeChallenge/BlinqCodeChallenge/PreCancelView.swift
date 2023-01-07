@@ -37,6 +37,7 @@ struct PreCancelView: View {
                             ToolbarItem(placement: .cancellationAction) {
                                 Button("Dismiss") {
                                     showSuccessfulCancel = false
+                                    hasRegisteredSuccessfully = false
                                 }
                             }                        }
                 }
