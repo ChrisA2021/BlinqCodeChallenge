@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct BlinqCodeChallengeApp: App {
+    @State private var hasRegisteredSuccessfully = false
+    
     var body: some Scene {
         WindowGroup {
-            PreRequestView()
+            if (!hasRegisteredSuccessfully) {
+                PreRequestView(hasRegisteredSuccessfully: $hasRegisteredSuccessfully)
+            }
+            else {
+                PreCancelView(hasRegisteredSuccessfully: $hasRegisteredSuccessfully)
+            }
         }
     }
 }

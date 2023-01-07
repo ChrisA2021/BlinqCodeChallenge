@@ -20,6 +20,7 @@ struct RequestFormView: View {
     @State private var requestMessage = ""
     @State private var showCongratulationsView = false
     @Binding var showRequestForm: Bool
+    @Binding var hasRegisteredSuccessfully: Bool
     
     var body: some View {
         VStack {
@@ -78,6 +79,7 @@ struct RequestFormView: View {
                             Button("Dismiss") {
                                 showCongratulationsView = false
                                 showRequestForm = false
+                                hasRegisteredSuccessfully = true
                             }
                         }                        }
             }
@@ -95,6 +97,6 @@ struct RequestFormView: View {
 
 struct RequestFormView_Previews: PreviewProvider {
     static var previews: some View {
-        RequestFormView(showRequestForm: .constant(true))
+        RequestFormView(showRequestForm: .constant(true),hasRegisteredSuccessfully: .constant(false))
     }
 }

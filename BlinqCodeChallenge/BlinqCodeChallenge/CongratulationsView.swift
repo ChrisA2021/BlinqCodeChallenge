@@ -13,34 +13,13 @@ struct CongratulationsView: View {
     
     var body: some View {
         ZStack{
-            Group {
-                ConfettiView("Confetti")
-                ConfettiView("Confetti")
-                ConfettiView("Confetti")
-            }
-            
-//            VStack{
-////                ConfettiView("Confetti")
-////                    .scaledToFill()
-////                    .position(.zero)
-//                ConfettiView("Confetti")
-//                    .scaledToFill()
-//                    .imageScale(.small)
-////                    .frame(width: 600, height: 1100)
-////                ConfettiView("Confetti")
-////                    .padding(.vertical, -265.0)
-////                ConfettiView("Confetti")
-////                ConfettiView("Confetti")
-////                    .frame(width: 600, height: 200)
-////                ConfettiView("Confetti")
-////                    .frame(width: 600, height:600)
-//            }
+            ConfettiView("Confetti")
             VStack{
                 HStack(alignment: .center, spacing: 0){
-                    Text("Congratulations ")
+                    Text("Congratulations")
                         .font(.title2)
                         .multilineTextAlignment(.center)
-                    Text("\(fullName)")
+                    Text(" \(fullName)")
                         .font(.title2)
                         .foregroundColor(Color.green)
                         .multilineTextAlignment(.center)
@@ -48,8 +27,6 @@ struct CongratulationsView: View {
                         .font(.title2)
                         .multilineTextAlignment(.center)
                 }
-                
-                
                 HStack{
                     Text("Your invite has been sent to")
                         .font(.title2)
@@ -61,14 +38,8 @@ struct CongratulationsView: View {
                         .foregroundColor(Color.green)
                         .multilineTextAlignment(.center)
                 }
-        }
-            
-        
-            //            List(0..<10) { item in
-            //                        ConfettiView("Confetti")
-            //                            .frame(width: 200, height: 200)
-            //
-            //                    }
+            }
+            Image("HappyBroccoli").resizable().aspectRatio(contentMode: .fit).padding(.top, 0.0).frame(width: 307, height: 301).position(CGPoint(x: 210, y: 700))
         }
         
     }
