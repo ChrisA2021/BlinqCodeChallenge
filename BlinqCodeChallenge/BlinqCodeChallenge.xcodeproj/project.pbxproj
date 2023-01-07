@@ -14,7 +14,8 @@
 		2A052BEC296990FD00C5738A /* Confetti.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A052BEB296990FD00C5738A /* Confetti.gif */; };
 		2A052BF029699D3800C5738A /* PreCancelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A052BEF29699D3800C5738A /* PreCancelView.swift */; };
 		2A052BF22969A8D100C5738A /* SuccessfulCancelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A052BF12969A8D100C5738A /* SuccessfulCancelView.swift */; };
-		2A052BF42969B20600C5738A /* Rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A052BF32969B20600C5738A /* Rain.gif */; };
+		2A052BF62969B2CF00C5738A /* RainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A052BF52969B2CF00C5738A /* RainView.swift */; };
+		2A052C002969B60400C5738A /* Rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A052BFF2969B60400C5738A /* Rain.gif */; };
 		2AA93FCC2962A4B600BC16AB /* BlinqCodeChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA93FCB2962A4B600BC16AB /* BlinqCodeChallengeApp.swift */; };
 		2AA93FCE2962A4B600BC16AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA93FCD2962A4B600BC16AB /* ContentView.swift */; };
 		2AA93FD02962A4B700BC16AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA93FCF2962A4B700BC16AB /* Assets.xcassets */; };
@@ -50,7 +51,8 @@
 		2A052BEB296990FD00C5738A /* Confetti.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Confetti.gif; sourceTree = "<group>"; };
 		2A052BEF29699D3800C5738A /* PreCancelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreCancelView.swift; sourceTree = "<group>"; };
 		2A052BF12969A8D100C5738A /* SuccessfulCancelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulCancelView.swift; sourceTree = "<group>"; };
-		2A052BF32969B20600C5738A /* Rain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Rain.gif; sourceTree = "<group>"; };
+		2A052BF52969B2CF00C5738A /* RainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainView.swift; sourceTree = "<group>"; };
+		2A052BFF2969B60400C5738A /* Rain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Rain.gif; sourceTree = "<group>"; };
 		2AA93FC82962A4B600BC16AB /* BlinqCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinqCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA93FCB2962A4B600BC16AB /* BlinqCodeChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinqCodeChallengeApp.swift; sourceTree = "<group>"; };
 		2AA93FCD2962A4B600BC16AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,7 +114,7 @@
 		2AA93FCA2962A4B600BC16AB /* BlinqCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				2A052BF32969B20600C5738A /* Rain.gif */,
+				2A052BFF2969B60400C5738A /* Rain.gif */,
 				2A052BEB296990FD00C5738A /* Confetti.gif */,
 				2A052BDB2965DB9D00C5738A /* APIRequester.swift */,
 				2AA93FCB2962A4B600BC16AB /* BlinqCodeChallengeApp.swift */,
@@ -122,6 +124,7 @@
 				2A052BE329693FC100C5738A /* ConfettiView.swift */,
 				2A052BEF29699D3800C5738A /* PreCancelView.swift */,
 				2A052BF12969A8D100C5738A /* SuccessfulCancelView.swift */,
+				2A052BF52969B2CF00C5738A /* RainView.swift */,
 				2AA93FCD2962A4B600BC16AB /* ContentView.swift */,
 				2AA93FCF2962A4B700BC16AB /* Assets.xcassets */,
 				2AA93FD12962A4B700BC16AB /* Preview Content */,
@@ -258,8 +261,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A052BF42969B20600C5738A /* Rain.gif in Resources */,
 				2A052BEC296990FD00C5738A /* Confetti.gif in Resources */,
+				2A052C002969B60400C5738A /* Rain.gif in Resources */,
 				2AA93FD32962A4B700BC16AB /* Preview Assets.xcassets in Resources */,
 				2AA93FD02962A4B700BC16AB /* Assets.xcassets in Resources */,
 			);
@@ -288,6 +291,7 @@
 			files = (
 				2A052BE429693FC100C5738A /* ConfettiView.swift in Sources */,
 				2A052BF22969A8D100C5738A /* SuccessfulCancelView.swift in Sources */,
+				2A052BF62969B2CF00C5738A /* RainView.swift in Sources */,
 				2A052BDE2967D34900C5738A /* RequestFormView.swift in Sources */,
 				2AA93FCE2962A4B600BC16AB /* ContentView.swift in Sources */,
 				2AA93FF62962A5CB00BC16AB /* PreRequestView.swift in Sources */,

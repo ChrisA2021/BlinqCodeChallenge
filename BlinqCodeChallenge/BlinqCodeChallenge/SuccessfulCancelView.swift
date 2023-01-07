@@ -11,7 +11,7 @@ struct SuccessfulCancelView: View {
     
     var body: some View {
         ZStack{
-            ConfettiView("Confetti")
+            RainView("Rain")
             VStack{
                 Spacer()
                 HStack(alignment: .center){
@@ -19,7 +19,6 @@ struct SuccessfulCancelView: View {
                         .font(.title2)
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 400.0)
-//                        .position(CGPoint(x: 210, y: 100))
                 }
             }
             Image("SadBroccoli").resizable().aspectRatio(contentMode: .fit).padding(.bottom, 0.0).frame(width: 307, height: 301).position(CGPoint(x: 210, y: 700))
