@@ -23,7 +23,7 @@ struct PreRequestView: View {
             }
             .sheet(isPresented: $showRequestForm) {
                 NavigationView {
-                    RequestFormView()
+                    RequestFormView(showRequestForm: $showRequestForm)
                         .toolbar{
                             ToolbarItem(placement: .cancellationAction) {
                                 Button("Dismiss") {

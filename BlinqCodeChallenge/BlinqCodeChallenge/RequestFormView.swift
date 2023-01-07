@@ -19,6 +19,7 @@ struct RequestFormView: View {
     @State private var confirmEmailError = "Please confirm your email"
     @State private var requestMessage = ""
     @State private var showCongratulationsView = false
+    @Binding var showRequestForm: Bool
     
     var body: some View {
         VStack {
@@ -60,9 +61,10 @@ struct RequestFormView: View {
                     if (fullName.count >= 3 && !email.isEmpty && email == confirmEmail) {
                         requestMessage = "Your request is being sent"
                         requestMessage = saveToServer(userName: fullName, userEmail: email)
-                        if (requestMessage == "Registered") {
-                            showCongratulationsView = true
-                        }
+                    }
+                    
+                    if (requestMessage == "Registered") {
+                        showCongratulationsView = true
                     }
                 }
                 Text(requestMessage)
@@ -70,11 +72,12 @@ struct RequestFormView: View {
             }
         }.sheet(isPresented: $showCongratulationsView) {
             NavigationView {
-                CongratulationsView()
+                CongratulationsView(fullName: $fullName, email: $email)
                     .toolbar{
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Dismiss") {
                                 showCongratulationsView = false
+                                showRequestForm = false
                             }
                         }                        }
             }
@@ -92,6 +95,6 @@ struct RequestFormView: View {
 
 struct RequestFormView_Previews: PreviewProvider {
     static var previews: some View {
-        RequestFormView()
+        RequestFormView(showRequestForm: .constant(true))
     }
 }
