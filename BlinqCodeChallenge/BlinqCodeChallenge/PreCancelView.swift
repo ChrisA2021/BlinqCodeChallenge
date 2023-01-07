@@ -18,7 +18,8 @@ struct PreCancelView: View {
             VStack{
                 Text("Broccoli & Co.")
                     .font(.title).padding(20)
-                Text("Please click below to cancel your invite")
+                Text("Please click below\nIf you would like to cancel your invite\n")
+                    .multilineTextAlignment(.center)
                 Button("Cancel your invite") {
                     showAlert = true
                 }.alert("Are you sure you would like to cancel your invite?",isPresented: $showAlert) {

@@ -17,7 +17,7 @@ struct PreRequestView: View {
             VStack{
                 Text("Broccoli & Co.")
                     .font(.title).padding(20)
-                Text("Please click below to get an invite")
+                Text("Please click below to get an invite\n")
                 Button(action: {showRequestForm.toggle()}, label: {Text("Request an Invite")})
             }
             .sheet(isPresented: $showRequestForm) {
