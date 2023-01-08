@@ -19,10 +19,10 @@ struct PreCancelView: View {
                 .resizable()
                 .accessibilityLabel("Broccoli Background")
             VStack{
-                Text("Broccoli & Co.")
-                    .font(.title).fontWeight(.bold).padding(20).background(.white)
-                Text("Please click below\nIf you would like to cancel your invite\n")
-                    .multilineTextAlignment(.center).background(.white)
+                Text("Broccoli & Co.").background(.white)
+                    .font(.title).fontWeight(.bold).padding(20)
+                Text("Please click below\nIf you would like to cancel your invite\n").background(.white)
+                    .multilineTextAlignment(.center)
                 Button("Cancel your invite") {
                     showAlert = true
                 }.alert("Are you sure you would like to cancel your invite?",isPresented: $showAlert) {
