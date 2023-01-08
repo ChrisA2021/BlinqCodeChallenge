@@ -2,7 +2,8 @@
 //  APIRequester.swift
 //  BlinqCodeChallenge
 //
-//  Created by Chrishane Amarasekara on 5/1/2023.
+//  Created by Postman(software) on 5/1/2023.
+//  Modified by Chrishane Amarasekara on 5/1/2023.
 //
 
 import Foundation
