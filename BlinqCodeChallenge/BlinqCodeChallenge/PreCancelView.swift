@@ -15,11 +15,14 @@ struct PreCancelView: View {
     
     var body: some View {
         ZStack{
+            Image("Broccoli Background")
+                .resizable()
+                .accessibilityLabel("Broccoli Background")
             VStack{
                 Text("Broccoli & Co.")
-                    .font(.title).padding(20)
+                    .font(.title).fontWeight(.bold).padding(20).background(.white)
                 Text("Please click below\nIf you would like to cancel your invite\n")
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.center).background(.white)
                 Button("Cancel your invite") {
                     showAlert = true
                 }.alert("Are you sure you would like to cancel your invite?",isPresented: $showAlert) {
@@ -28,7 +31,7 @@ struct PreCancelView: View {
                     Button("Yes") {
                         showSuccessfulCancel = true
                     }
-                }
+                }.foregroundColor(Color.red).background(.white)
             }
             .sheet(isPresented: $showSuccessfulCancel) {
                 NavigationView {

@@ -14,11 +14,15 @@ struct PreRequestView: View {
     
     var body: some View {
         ZStack{
+            Image("Broccoli Background")
+                .resizable()
+                .accessibilityLabel("Broccoli Background")
             VStack{
                 Text("Broccoli & Co.")
-                    .font(.title).padding(20)
-                Text("Please click below to get an invite\n")
-                Button(action: {showRequestForm.toggle()}, label: {Text("Request an Invite")})
+                    .background(.white)
+                    .font(.title).fontWeight(.bold).padding(20)
+                Text("Please click below to get an invite\n").background(.white)
+                Button(action: {showRequestForm.toggle()}, label: {Text("Request an Invite")}).background(.white)
             }
             .sheet(isPresented: $showRequestForm) {
                 NavigationView {
