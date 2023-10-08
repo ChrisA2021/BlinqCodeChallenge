@@ -1,2 +1,2 @@
-# BlinqCodeChallenge
-iOS Code Challenge created by Blinq
+# iOSCodeChallenge
+iOS Code Challenge
